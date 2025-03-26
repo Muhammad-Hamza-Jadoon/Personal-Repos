@@ -1,0 +1,330 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Muhammad Hamza Jadoon} % Your Name
+\newcommand{\course}{Artificial Intelligence} % Your Program
+\newcommand{\roll}{} % Your Roll No.
+\newcommand{\phone}{0310 5416397} % Your Phone Number
+\newcommand{\emaila}{muhammadhamzajadoon@gmail.com} %Email 1
+\newcommand{\emailb}{officialemail@mnit.ac.in} %Email 2
+
+
+% \begin{document}
+% \fontfamily{cmr}\selectfont
+% %----------HEADING-----------------
+% \parbox{2.35cm}{%
+%   \includegraphics[width=2.35cm,clip]{download.png}
+% }
+% \parbox{\dimexpr\linewidth-2.8cm\relax}{
+%   \begin{tabularx}{\linewidth}{L @{\hspace{0.5cm}} c}  % Adjust spacing as needed
+%     \textbf{\Large \name} &  \\
+%     {\raisebox{0.0\height}{\footnotesize \faPhone}\ +92-\phone} & {\raisebox{0.0\height}{\footnotesize \faEnvelope}\ \emaila} \\
+%     \multicolumn{2}{r}{\href {https://github.com/Muhammad-Hamza-Jadoon}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}}} \\
+%     \multicolumn{2}{r}{\href{https://www.yourLinkedinProfile.com/in/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}}
+%   \end{tabularx}
+% }
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.35cm}{%
+\includegraphics[width=2.35cm,clip]{download.png}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +92-\phone}\\
+  {Roll No.: 20i-0570\roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+
+  {Degree: BS-AI} &  \href {https://github.com/Muhammad-Hamza-Jadoon}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}} \\
+  {FAST - NUCES, Islamabad} & \href{https://www.linkedin.com/in/muhammad-hamza-b49026314/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {FAST-NUCES, Islamabad}{}
+      {Bachelors in AI, Islamabad}{2020-2024}
+    \resumeSubheading
+      {Benchmark School System}{}
+      {O/A levels, Islamabad}{2018-2020}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Personal Projects}}
+\resumeSubHeadingListStart
+
+
+    \resumeProject
+      {Recognize Car Licence plate from video} 
+      {Computer vision to extract the license plate then Optical Character Recognition to recognize the license number} 
+      {May 2023} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: skimage, Opencv, tensorflow, imutils}
+        \item {Processes video frames in real-time using image preprocessing, contour detection, and a pre-trained TensorFlow
+ OCR model to detect and recognize car license plate}
+    \resumeItemListEnd
+    \vspace{-2mm}
+
+
+    \resumeProject
+      {SafeGuardHer} %Project Name
+      {Real-Time Audio Threat detection} %Project Name, Location Name
+      {Final Year Project} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: Flutter, Tensorflow, Roberta, Pytorch}
+        \item {Fine-Tuning LLMs for improved perfromance in sceam and hate speech detection on real time audio}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      {Document-Driven Conversational AI} %Project Name
+      {Personalized chatbot} %Project Name, Location Name
+      {September, 2023} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: Langchain, Tensorflow, sentence transformers, Llama, Streamlit}
+        \item {Pretrained language model to extract document embeddings, learn patterns, and engage in natural language conversations for personalized information retrieval)}
+    \resumeItemListEnd
+    \vspace{-2mm}
+
+    \resumeProject
+      {Cricket Ontology using Knowledge Graph Tech} %Project Name
+      {SQL retrieval system for Cricket Stats Scraped from online resources} %Project Name, Location Name
+      {May, 2023} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: GraphDb, Protégé, OWL, RDF}
+        \item {Developed a comprehensive cricket ontology in Protégé, populated it with scraped data, and created a knowledge graph in GraphDB, enabling data retrieval with SQL statements}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+% %-----------EXPERIENCE-----------------
+\section{\textbf{Certifications}}
+\vspace{0.2cm}
+{\bfseries Coursera:}  % Make "Coursera" bold using \bfseries
+\resumeItemListStart
+  % \itemsep -0.2cm
+  \item {Machine Learning Specialization}
+  \item {Deep Learning Specialization}
+  \item {Generative Adversarial Networks (GANs) Specialization}
+  \item {Generative AI with Large Language Models}
+  \item {Natural Language Processing Specialization}
+  \vspace{0.2cm}  % Reduce vertical space after the last item
+\resumeItemListEnd
+
+
+% %-----------EXPERIENCE-----------------
+% \section{\textbf{Certifications}}  % Remove the empty curly braces after "Certifications"
+
+% \resumeSubHeadingListStart
+%   \resumeSubheading{Coursera}{}{}{}
+%   \vspace{-2.0mm}
+%   \resumeItemListStart
+%     \item {Machine Learning Specialization}
+%     \item {Deep Learning Specialization}
+%     \item {Generative Adversarial Networks (GANs) Specialization}
+%     \item {Generative AI with Large Language Models}
+%     \item {Natural Language Processing Specialization}
+%   \resumeItemListEnd
+% \resumeSubHeadingListEnd
+% \vspace{-8.5mm}
+
+
+
+% \section{\textbf{Certifications}}  % Remove the empty curly braces after "Certifications"
+
+% \resumeSubHeadingListStart
+%   \resumeSubheading{Coursera}  % Only the main text for the subheading
+%   \vspace{-2.0mm}
+%   \resumeItemListStart  % List of certifications starts here
+%     \item {Machine Learning Specialization}
+%     \item {Deep Learning Specialization}
+%     \item {Generative Adversarial Networks (GANs) Specialization}
+%     \item {Generative AI with Large Language Models}
+%     \item {Natural Language Processing Specialization}
+%   \resumeItemListEnd  % List of certifications ends here
+% \resumeSubHeadingListEnd
+% \vspace{-8.5mm}
+
+
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills and Interests}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C++, C, Python(major), React, Java, Html, CSS, SQL, Php, C} \\
+     \textbf{Developer Tools}{: Git, Gitlab, Visual Studio Code, Jupyter Notebook, Jira} \\
+     \textbf{Frameworks}{: Django, Flask, React Native, Pytorch, Keras, tensorflow, Oracle, OpenCL} \\
+     \textbf{Cloud/Databases}{: AWS (Amazon Web Services)} \\
+     \textbf{Coursework}{: lgorithms and Data Structures, Machine Learning, Database Management, Software Engineering,
+Artificial Intelligence, NLP, CV} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+
+%-----------Positions of Responsibility-----------------
+\section{\textbf{Statement of Interest}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+%\resumePOR{Domain } % Domain
+{I am passionate about problem solving and possess a strong foundation in the domains of Artificial Intelligence (AI), Natural Language Processing (NLP), and Computer Vision. I am currently seeking opportunities that will leverage my skills and expertise to drive impactful solutions. My goal is to contribute to an organization's success while also advancing my own professional growth and development.}
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+
+%-----------Achievements-----------------
+
+
+%-------------------------------------------
+\end{document}

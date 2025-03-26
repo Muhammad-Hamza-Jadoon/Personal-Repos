@@ -1,0 +1,31 @@
+% Forget this one
+\resumeProject
+      {Driver Behavior Detection | CNN}
+      {Identify and analyze the actions of drivers while they are driving} %Project Name, Location Name
+      {May 2023} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: Tensorflow, Opencv, Pytorch}
+        \item {Fine Tune pretrained discriminative models, like VGGNet, AlexNet, ResNet}
+    \resumeItemListEnd
+    \vspace{-2mm}
+
+
+
+
+% Computer vision project
+\resumeProject
+      {Recognize Car Licence plate from video} 
+      {Computer vision to extract the license plate then Optical Character Recognition to recognize the license number} 
+      {May 2023} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: skimage, Opencv, tensorflow, imutils}
+        \item {Processes video frames in real-time using image preprocessing, contour detection, and a pre-trained TensorFlow
+ OCR model to detect and recognize car license plate}
+    \resumeItemListEnd
+    \vspace{-2mm}
+
+
+
+
