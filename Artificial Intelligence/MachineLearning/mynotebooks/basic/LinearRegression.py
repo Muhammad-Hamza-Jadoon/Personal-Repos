@@ -4,7 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-
 def compute_cost(x, y, w, b): 
     """
     Computes the cost function for linear regression.
@@ -31,8 +30,6 @@ def compute_cost(x, y, w, b):
     total_cost = (1/(2*m))*sum((pred - y)**2)
 
     return total_cost
-
-
 
 
 def compute_gradient(x, y, w, b): 
